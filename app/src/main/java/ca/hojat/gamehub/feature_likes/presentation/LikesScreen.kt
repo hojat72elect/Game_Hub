@@ -89,13 +89,13 @@ private fun LikesScreen(
 @Preview
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
-private fun LikedGamesPreview() {
+private fun NotLikedAnyGames() {
     GameHubTheme {
         LikesScreen(
             uiState = GamesUiState(
                 isLoading = false,
-                infoIconId = R.drawable.gamepad_variant_outline,
-                infoTitle = "No Games\nNo Games",
+                infoIconId = R.drawable.account_heart_outline,
+                infoTitle = stringResource(id = R.string.liked_games_info_title),
                 games = emptyList(),
             ),
             onSearchButtonClicked = {},
