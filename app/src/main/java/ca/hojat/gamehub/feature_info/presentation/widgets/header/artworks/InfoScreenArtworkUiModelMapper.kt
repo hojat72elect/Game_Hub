@@ -7,9 +7,9 @@ import com.paulrybitskyi.hiltbinder.BindType
 import javax.inject.Inject
 
 abstract class InfoScreenArtworkUiModelMapper {
-    internal abstract fun mapToUiModel(image: Image): InfoScreenArtworkUiModel
+    abstract fun mapToUiModel(image: Image): InfoScreenArtworkUiModel
 
-    internal fun mapToUiModels(images: List<Image>): List<InfoScreenArtworkUiModel> {
+    fun mapToUiModels(images: List<Image>): List<InfoScreenArtworkUiModel> {
         if (images.isEmpty()) return listOf(InfoScreenArtworkUiModel.DefaultImage)
 
         return images.map(::mapToUiModel)
@@ -18,7 +18,7 @@ abstract class InfoScreenArtworkUiModelMapper {
 }
 
 @BindType(installIn = BindType.Component.VIEW_MODEL)
-internal class InfoScreenArtworkUiModelMapperImpl @Inject constructor(
+class InfoScreenArtworkUiModelMapperImpl @Inject constructor(
     private val igdbImageUrlFactory: IgdbImageUrlFactory,
 ) : InfoScreenArtworkUiModelMapper() {
 

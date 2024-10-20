@@ -146,7 +146,7 @@ private fun ImageViewer(
 }
 
 @Composable
-internal fun SystemBarsColorHandler() {
+fun SystemBarsColorHandler() {
     val systemUiController = rememberSystemUiController()
     val defaultStatusBarColor = GameHubTheme.colors.statusBar
     val defaultNavigationBarColor = GameHubTheme.colors.navBar

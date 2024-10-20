@@ -16,7 +16,7 @@ interface GamesRefreshingThrottlerKeyProvider {
 }
 
 @Singleton
-internal class GamesRefreshingThrottlerKeyProviderImpl @Inject constructor() :
+class GamesRefreshingThrottlerKeyProviderImpl @Inject constructor() :
     GamesRefreshingThrottlerKeyProvider {
 
     override fun providePopularGamesKey(pagination: Pagination): String {

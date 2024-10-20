@@ -6,7 +6,7 @@ import ca.hojat.gamehub.R
 import org.junit.Before
 import org.junit.Test
 
-internal class GameRatingFormatterImplTest {
+class GameRatingFormatterImplTest {
 
     private lateinit var stringProvider: FakeStringProvider
     private lateinit var sut: GameRatingFormatterImpl

@@ -13,7 +13,7 @@ interface RelativeDateFormatter {
 }
 
 @BindType
-internal class RelativeDateFormatterImpl @Inject constructor(
+class RelativeDateFormatterImpl @Inject constructor(
     private val timeProvider: TimeProvider, private val stringProvider: StringProvider
 ) : RelativeDateFormatter {
 

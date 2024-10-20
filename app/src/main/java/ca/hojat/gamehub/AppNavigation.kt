@@ -31,7 +31,7 @@ import ca.hojat.gamehub.feature_search.presentation.GamesSearch
 import ca.hojat.gamehub.feature_search.presentation.GamesSearchRoute
 
 @Composable
-internal fun AppNavigation(
+fun AppNavigation(
     navController: NavHostController,
     modifier: Modifier,
 ) {

@@ -14,7 +14,7 @@ import ca.hojat.gamehub.common_ui.theme.subtitle3
 import ca.hojat.gamehub.feature_info.presentation.widgets.utils.InfoScreenSection
 
 @Composable
-internal fun InfoScreenDetails(details: InfoScreenDetailsUiModel) {
+fun InfoScreenDetails(details: InfoScreenDetailsUiModel) {
     InfoScreenSection(
         title = stringResource(R.string.game_info_details_title),
         titleBottomPadding = GameHubTheme.spaces.spacing_1_0,

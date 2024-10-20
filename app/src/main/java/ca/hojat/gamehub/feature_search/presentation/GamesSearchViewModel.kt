@@ -35,7 +35,7 @@ private const val KEY_CURRENT_SEARCH_QUERY = "current_search_query"
 private const val KEY_CONFIRMED_SEARCH_QUERY = "confirmed_search_query"
 
 @HiltViewModel
-internal class GamesSearchViewModel @Inject constructor(
+class GamesSearchViewModel @Inject constructor(
     private val searchGamesUseCase: SearchGamesUseCase,
     private val uiModelMapper: GameUiModelMapper,
     private val dispatcherProvider: DispatcherProvider,

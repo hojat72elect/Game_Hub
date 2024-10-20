@@ -11,9 +11,9 @@ import androidx.navigation.NavController
 import ca.hojat.gamehub.core.extensions.toCsv
 import java.net.URLEncoder
 
-internal val START_DESTINATION = Destination.Discover
+val START_DESTINATION = Destination.Discover
 
-internal sealed class Destination(val route: String) {
+sealed class Destination(val route: String) {
     object Discover : Destination("discover")
     object Likes : Destination("likes")
     object News : Destination("news")
@@ -142,7 +142,7 @@ internal sealed class Destination(val route: String) {
 
     }
 
-    internal companion object {
+    companion object {
 
         val Saver = Saver(
             save = { it.route },
@@ -168,7 +168,7 @@ internal sealed class Destination(val route: String) {
 
 @Stable
 @Composable
-internal fun NavController.currentDestinationAsState(): State<Destination> {
+fun NavController.currentDestinationAsState(): State<Destination> {
     val selectedDestination = rememberSaveable(stateSaver = Destination.Saver) {
         mutableStateOf(START_DESTINATION)
     }

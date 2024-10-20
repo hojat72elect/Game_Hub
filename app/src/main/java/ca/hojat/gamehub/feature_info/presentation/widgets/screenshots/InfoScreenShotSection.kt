@@ -20,7 +20,7 @@ import ca.hojat.gamehub.common_ui.widgets.GameHubCard
 import ca.hojat.gamehub.feature_info.presentation.widgets.utils.InfoScreenSectionWithInnerList
 
 @Composable
-internal fun InfoScreenShotSection(
+fun InfoScreenShotSection(
     screenshots: List<InfoScreenShotUiModel>,
     onScreenshotClicked: (screenshotIndex: Int) -> Unit,
 ) {

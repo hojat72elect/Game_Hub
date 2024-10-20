@@ -25,7 +25,7 @@ private val PROTO_OAUTH_CREDENTIALS = NewProtoOauthCredentials.newBuilder()
     .setExpirationTime(10_000L)
     .build()
 
-internal class AuthFileDataStoreTest {
+class AuthFileDataStoreTest {
 
     @MockK
     private lateinit var protoDataStore: DataStore<NewProtoOauthCredentials>

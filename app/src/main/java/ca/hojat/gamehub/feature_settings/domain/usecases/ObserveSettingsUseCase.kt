@@ -10,11 +10,11 @@ import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 import javax.inject.Singleton
 
-internal interface ObserveSettingsUseCase : ObservableUseCase<Unit, Settings>
+interface ObserveSettingsUseCase : ObservableUseCase<Unit, Settings>
 
 @Singleton
 @BindType
-internal class ObserveSettingsUseCaseImpl @Inject constructor(
+class ObserveSettingsUseCaseImpl @Inject constructor(
     private val localDataSource: SettingsLocalDataSource,
     private val dispatcherProvider: DispatcherProvider,
 ) : ObserveSettingsUseCase {

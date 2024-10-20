@@ -7,7 +7,7 @@ import org.junit.Before
 import org.junit.Test
 import java.time.format.DateTimeParseException
 
-internal class ArticlePublicationDateMapperTest {
+class ArticlePublicationDateMapperTest {
 
     private lateinit var sut: ArticlePublicationDateMapper
 

@@ -6,7 +6,7 @@ import kotlinx.serialization.json.Json
 import org.junit.Before
 import org.junit.Test
 
-internal class GamespotErrorMessageExtractorTest {
+class GamespotErrorMessageExtractorTest {
 
     private lateinit var sut: GamespotErrorMessageExtractor
 

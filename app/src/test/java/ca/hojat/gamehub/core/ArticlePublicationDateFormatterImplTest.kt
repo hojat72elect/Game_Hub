@@ -18,7 +18,7 @@ import java.time.ZoneId
 
 private const val RELATIVE_DATE = "relative_date"
 
-internal class ArticlePublicationDateFormatterImplTest {
+class ArticlePublicationDateFormatterImplTest {
 
     @MockK
     private lateinit var relativeDateFormatter: RelativeDateFormatter

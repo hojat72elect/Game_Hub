@@ -44,7 +44,7 @@ private val LogoMaxHeight = 150.dp
 private const val COLOR_ALPHA_MAX = 255
 
 @Composable
-internal fun InfoScreenCompanies(
+fun InfoScreenCompanies(
     companies: List<InfoScreenCompanyUiModel>,
     onCompanyClicked: (InfoScreenCompanyUiModel) -> Unit,
 ) {

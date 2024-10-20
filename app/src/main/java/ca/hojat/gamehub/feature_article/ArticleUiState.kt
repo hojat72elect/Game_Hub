@@ -3,7 +3,7 @@ package ca.hojat.gamehub.feature_article
 import androidx.compose.runtime.Immutable
 
 @Immutable
-internal data class ArticleUiState(
+data class ArticleUiState(
     val imageUrl: String?,
     val title: String,
     val lede: String,

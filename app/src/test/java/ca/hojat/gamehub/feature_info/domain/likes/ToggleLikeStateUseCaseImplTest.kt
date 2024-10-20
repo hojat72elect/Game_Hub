@@ -18,7 +18,7 @@ private const val GAME_ID = 100
 
 private val USE_CASE_PARAMS = TOGGLE_GAME_LIKE_STATE_USE_CASE_PARAMS.copy(id = GAME_ID)
 
-internal class ToggleLikeStateUseCaseImplTest {
+class ToggleLikeStateUseCaseImplTest {
 
     @get:Rule
     val mainCoroutineRule = MainCoroutineRule()

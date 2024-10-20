@@ -5,7 +5,7 @@ import ca.hojat.gamehub.feature_settings.domain.DomainSettings
 import ca.hojat.gamehub.feature_settings.domain.DomainTheme
 import javax.inject.Inject
 
-internal class ProtoSettingsMapper @Inject constructor() {
+class ProtoSettingsMapper @Inject constructor() {
 
     fun mapToProtoSettings(settings: DomainSettings): ProtoSettings {
         return ProtoSettings.newBuilder()

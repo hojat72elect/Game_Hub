@@ -16,7 +16,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
-internal class ObserveSettingsUseCaseImplTest {
+class ObserveSettingsUseCaseImplTest {
 
     @get:Rule
     val mainCoroutineRule = MainCoroutineRule()

@@ -8,7 +8,7 @@ import kotlinx.serialization.json.Json
 import org.junit.Before
 import org.junit.Test
 
-internal class CompositeErrorMessageExtractorTest {
+class CompositeErrorMessageExtractorTest {
 
     private lateinit var sut: CompositeErrorMessageExtractor
 

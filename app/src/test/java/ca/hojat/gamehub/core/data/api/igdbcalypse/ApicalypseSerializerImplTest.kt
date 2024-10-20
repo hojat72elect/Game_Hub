@@ -8,7 +8,7 @@ import org.junit.Assert.assertThrows
 import org.junit.Before
 import org.junit.Test
 
-internal class ApicalypseSerializerImplTest {
+class ApicalypseSerializerImplTest {
 
     private lateinit var sut: ApicalypseSerializerImpl
 

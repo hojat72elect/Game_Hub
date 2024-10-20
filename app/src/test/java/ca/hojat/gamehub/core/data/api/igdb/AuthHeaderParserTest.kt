@@ -6,7 +6,7 @@ import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Test
 
-internal class AuthHeaderParserTest {
+class AuthHeaderParserTest {
 
     private companion object {
         const val TOKEN = "token"

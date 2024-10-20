@@ -17,15 +17,15 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
 import javax.inject.Inject
 
-internal const val PARAM_GAME_NAME = "game-name"
-internal const val PARAM_TITLE = "title"
-internal const val PARAM_INITIAL_POSITION = "initial-position"
-internal const val PARAM_IMAGE_URLS = "image-urls"
+const val PARAM_GAME_NAME = "game-name"
+const val PARAM_TITLE = "title"
+const val PARAM_INITIAL_POSITION = "initial-position"
+const val PARAM_IMAGE_URLS = "image-urls"
 
-internal const val KEY_SELECTED_POSITION = "selected_position"
+const val KEY_SELECTED_POSITION = "selected_position"
 
 @HiltViewModel
-internal class ImageViewerViewModel @Inject constructor(
+class ImageViewerViewModel @Inject constructor(
     private val stringProvider: StringProvider,
     private val savedStateHandle: SavedStateHandle,
 ) : BaseViewModel() {

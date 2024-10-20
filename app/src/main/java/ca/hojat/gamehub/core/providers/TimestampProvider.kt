@@ -9,7 +9,7 @@ interface TimestampProvider {
 }
 
 @BindType
-internal class TimestampProviderImpl @Inject constructor() : TimestampProvider {
+class TimestampProviderImpl @Inject constructor() : TimestampProvider {
 
     override fun getUnixTimestamp(timeUnit: TimeUnit): Long {
         return timeUnit.convert(System.currentTimeMillis(), TimeUnit.MILLISECONDS)

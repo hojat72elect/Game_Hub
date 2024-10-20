@@ -16,12 +16,12 @@ abstract class DiscoverItemModelMapper {
      * You give it a [Game] and it will be converted to the normal data we use
      * in discover screen; which is [DiscoverScreenItemData].
      */
-    internal abstract fun mapToUiModel(game: Game): DiscoverScreenItemData
+    abstract fun mapToUiModel(game: Game): DiscoverScreenItemData
 
     /**
      * You give it a list of [Game]s and they will be converted to a list of [DiscoverScreenItemData].
      */
-    internal fun mapToUiModels(
+    fun mapToUiModels(
         games: List<Game>,
     ): List<DiscoverScreenItemData> {
         return games.map(::mapToUiModel)
@@ -29,7 +29,7 @@ abstract class DiscoverItemModelMapper {
 }
 
 @BindType(installIn = BindType.Component.VIEW_MODEL)
-internal class DiscoverItemModelMapperImpl @Inject constructor(
+class DiscoverItemModelMapperImpl @Inject constructor(
     private val igdbImageUrlFactory: IgdbImageUrlFactory
 ) : DiscoverItemModelMapper() {
 

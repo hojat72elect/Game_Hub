@@ -12,7 +12,7 @@ private val IMAGE = Image(
     height = 1000,
 )
 
-internal class IgdbImageUrlFactoryImplTest {
+class IgdbImageUrlFactoryImplTest {
 
     private lateinit var sut: IgdbImageUrlFactoryImpl
 

@@ -20,7 +20,7 @@ private val Context.settingsProtoDataStore by dataStore(
 
 @Module
 @InstallIn(SingletonComponent::class)
-internal object CoreModule {
+object CoreModule {
 
     @Provides
     fun provideSettingsProtoDataStore(

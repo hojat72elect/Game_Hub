@@ -32,7 +32,7 @@ private const val AnimationDuration = 300
 private const val ContentMaxLines = 4
 
 @Composable
-internal fun InfoScreenSummary(summary: String) {
+fun InfoScreenSummary(summary: String) {
     var hasTextBeenLaidOut by rememberSaveable { mutableStateOf(false) }
     var collapsedHeight by rememberSaveable { mutableStateOf(0) }
     var isExpanded by rememberSaveable { mutableStateOf(false) }

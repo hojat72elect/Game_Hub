@@ -12,7 +12,7 @@ interface WebsiteIconProvider {
 }
 
 @BindType
-internal class WebsiteIconProviderImpl @Inject constructor() : WebsiteIconProvider {
+class WebsiteIconProviderImpl @Inject constructor() : WebsiteIconProvider {
 
     override fun provideIconIdForWebsite(website: Website): Int {
         return when (website.category) {

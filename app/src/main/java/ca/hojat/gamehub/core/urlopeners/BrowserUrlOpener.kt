@@ -10,7 +10,7 @@ import javax.inject.Inject
 
 @BindType(withQualifier = true)
 @UrlOpenerKey(UrlOpenerKey.Type.BROWSER)
-internal class BrowserUrlOpener @Inject constructor() : UrlOpener {
+class BrowserUrlOpener @Inject constructor() : UrlOpener {
 
     override fun openUrl(url: String, context: Context): Boolean {
         val intent = createIntent(url, context)

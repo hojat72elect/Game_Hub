@@ -29,7 +29,7 @@ import org.junit.Test
 
 private val USE_CASE_PARAMS = GetGameInfoUseCase.Params(gameId = 0)
 
-internal class GetGameInfoUseCaseImplTest {
+class GetGameInfoUseCaseImplTest {
 
     @get:Rule
     val mainCoroutineRule = MainCoroutineRule()

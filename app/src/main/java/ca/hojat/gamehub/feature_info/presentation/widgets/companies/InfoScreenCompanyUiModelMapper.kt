@@ -10,9 +10,9 @@ import com.paulrybitskyi.hiltbinder.BindType
 import javax.inject.Inject
 
 abstract class InfoScreenCompanyUiModelMapper {
-    internal abstract fun mapToUiModel(company: InvolvedCompany): InfoScreenCompanyUiModel
+    abstract fun mapToUiModel(company: InvolvedCompany): InfoScreenCompanyUiModel
 
-    internal fun mapToUiModels(
+    fun mapToUiModels(
         companies: List<InvolvedCompany>,
     ): List<InfoScreenCompanyUiModel> {
         if (companies.isEmpty()) return emptyList()
@@ -29,7 +29,7 @@ abstract class InfoScreenCompanyUiModelMapper {
 }
 
 @BindType(installIn = BindType.Component.VIEW_MODEL)
-internal class InfoScreenCompanyUiModelMapperImpl @Inject constructor(
+class InfoScreenCompanyUiModelMapperImpl @Inject constructor(
     private val igdbImageUrlFactory: IgdbImageUrlFactory,
     private val stringProvider: StringProvider,
 ) : InfoScreenCompanyUiModelMapper() {

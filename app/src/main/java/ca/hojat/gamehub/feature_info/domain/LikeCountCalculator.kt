@@ -9,7 +9,7 @@ interface LikeCountCalculator {
 }
 
 @BindType
-internal class LikeCountCalculatorImpl @Inject constructor() : LikeCountCalculator {
+class LikeCountCalculatorImpl @Inject constructor() : LikeCountCalculator {
 
     override fun calculateLikeCount(game: Game): Int {
         val followerCount = (game.followerCount ?: 0)

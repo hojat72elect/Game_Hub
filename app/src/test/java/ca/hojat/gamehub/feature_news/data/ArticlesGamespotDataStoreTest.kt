@@ -30,7 +30,7 @@ private val API_ARTICLES = listOf(
     ApiArticle(publicationDate = "2020-03-02 12:14:16")
 )
 
-internal class ArticlesGamespotDataStoreTest {
+class ArticlesGamespotDataStoreTest {
 
     @get:Rule
     val mainCoroutineRule = MainCoroutineRule()

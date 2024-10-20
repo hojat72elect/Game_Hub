@@ -13,7 +13,7 @@ import javax.inject.Inject
 
 @BindType(withQualifier = true)
 @UrlOpenerKey(UrlOpenerKey.Type.NATIVE_APP)
-internal class NativeAppUrlOpener @Inject constructor() : UrlOpener {
+class NativeAppUrlOpener @Inject constructor() : UrlOpener {
 
     override fun openUrl(url: String, context: Context): Boolean {
         return if (SdkInfo.IS_AT_LEAST_11) {

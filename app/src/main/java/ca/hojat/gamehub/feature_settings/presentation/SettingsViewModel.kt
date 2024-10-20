@@ -24,7 +24,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-internal class SettingsViewModel @Inject constructor(
+class SettingsViewModel @Inject constructor(
     private val saveSettingsUseCase: SaveSettingsUseCase,
     private val observeSettingsUseCase: ObserveSettingsUseCase,
     private val uiModelMapper: SettingsUiModelMapper,

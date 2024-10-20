@@ -36,7 +36,7 @@ import javax.inject.Inject
 private const val PARAM_CATEGORY = "category"
 
 @HiltViewModel
-internal class CategoryViewModel @Inject constructor(
+class CategoryViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     stringProvider: StringProvider,
     @TransitionAnimationDuration

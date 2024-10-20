@@ -4,7 +4,7 @@ import androidx.compose.runtime.Immutable
 import ca.hojat.gamehub.common_ui.widgets.FiniteUiState
 
 @Immutable
-internal data class SettingsUiState(
+data class SettingsUiState(
     val isLoading: Boolean,
     val sections: List<SettingsSectionUiModel>,
     val selectedThemeName: String?,
@@ -13,7 +13,7 @@ internal data class SettingsUiState(
     val isLanguagePickerVisible: Boolean
 )
 
-internal val SettingsUiState.finiteUiState: FiniteUiState
+val SettingsUiState.finiteUiState: FiniteUiState
     get() = when {
         isInLoadingState -> FiniteUiState.LOADING
         isInSuccessState -> FiniteUiState.SUCCESS
@@ -26,11 +26,11 @@ private val SettingsUiState.isInLoadingState: Boolean
 private val SettingsUiState.isInSuccessState: Boolean
     get() = sections.isNotEmpty()
 
-internal fun SettingsUiState.toLoadingState(): SettingsUiState {
+fun SettingsUiState.toLoadingState(): SettingsUiState {
     return copy(isLoading = true)
 }
 
-internal fun SettingsUiState.toSuccessState(
+fun SettingsUiState.toSuccessState(
     sections: List<SettingsSectionUiModel>,
     selectedThemeName: String,
     selectedLanguageName: String
@@ -44,26 +44,26 @@ internal fun SettingsUiState.toSuccessState(
 }
 
 @Immutable
-internal data class SettingsSectionUiModel(
+data class SettingsSectionUiModel(
     val id: Int,
     val title: String,
     val items: List<SettingsSectionItemUiModel>,
 )
 
 @Immutable
-internal data class SettingsSectionItemUiModel(
+data class SettingsSectionItemUiModel(
     val id: Int,
     val title: String,
     val description: String,
     val isClickable: Boolean = true,
 )
 
-internal enum class SettingSection(val id: Int) {
+enum class SettingSection(val id: Int) {
     GENERAL(id = 1),
     ABOUT(id = 2),
 }
 
-internal enum class SettingItem(val id: Int) {
+enum class SettingItem(val id: Int) {
     THEME(id = 1),
     LANGUAGE(id = 2),
     SOURCE_CODE(id = 3),

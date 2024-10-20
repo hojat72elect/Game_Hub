@@ -11,7 +11,7 @@ interface VersionNameProvider {
 }
 
 @BindType
-internal class VersionNameProviderImpl @Inject constructor(
+class VersionNameProviderImpl @Inject constructor(
     @ApplicationContext private val context: Context,
     private val stringProvider: StringProvider,
 ) : VersionNameProvider {

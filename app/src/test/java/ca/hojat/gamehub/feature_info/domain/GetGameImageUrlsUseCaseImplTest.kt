@@ -27,7 +27,7 @@ private val USE_CASE_PARAMS = GetGameImageUrlsUseCase.Params(
     gameImageType = GameImageType.COVER,
 )
 
-internal class GetGameImageUrlsUseCaseImplTest {
+class GetGameImageUrlsUseCaseImplTest {
 
     @get:Rule
     val mainCoroutineRule = MainCoroutineRule()

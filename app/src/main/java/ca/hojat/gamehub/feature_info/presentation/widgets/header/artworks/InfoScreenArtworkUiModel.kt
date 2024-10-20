@@ -5,7 +5,7 @@ import androidx.compose.runtime.Immutable
 private const val DEFAULT_IMAGE_ID = "default_image_id"
 
 @Immutable
-internal sealed class InfoScreenArtworkUiModel(open val id: String) {
+sealed class InfoScreenArtworkUiModel(open val id: String) {
     /**
      * This game doesn't have an artwork image at all, so we show a default image of our own.
      */

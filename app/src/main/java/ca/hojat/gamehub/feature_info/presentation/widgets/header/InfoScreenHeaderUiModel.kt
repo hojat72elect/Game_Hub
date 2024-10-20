@@ -8,7 +8,7 @@ import ca.hojat.gamehub.feature_info.presentation.widgets.header.artworks.InfoSc
  * @param title: name of the game.
  */
 @Immutable
-internal data class InfoScreenHeaderUiModel(
+data class InfoScreenHeaderUiModel(
     val artworks: List<InfoScreenArtworkUiModel>,
     val isLiked: Boolean,
     val coverImageUrl: String?,

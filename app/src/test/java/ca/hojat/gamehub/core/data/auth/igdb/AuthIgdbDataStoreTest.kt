@@ -26,7 +26,7 @@ private val API_OAUTH_CREDENTIALS = ApiOauthCredentials(
     tokenTtl = 500L
 )
 
-internal class AuthIgdbDataStoreTest {
+class AuthIgdbDataStoreTest {
 
     @MockK
     private lateinit var authEndpoint: AuthEndpoint

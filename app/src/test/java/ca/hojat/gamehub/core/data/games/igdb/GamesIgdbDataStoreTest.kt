@@ -33,7 +33,7 @@ private val API_GAMES = listOf(
     ApiGame(id = 3, name = "name3"),
 )
 
-internal class GamesIgdbDataStoreTest {
+class GamesIgdbDataStoreTest {
 
     @get:Rule
     val mainCoroutineRule = MainCoroutineRule()

@@ -27,7 +27,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
-internal class RefreshComingSoonGamesUseCaseImplTest {
+class RefreshComingSoonGamesUseCaseImplTest {
 
     @get:Rule
     val mainCoroutineRule = MainCoroutineRule()

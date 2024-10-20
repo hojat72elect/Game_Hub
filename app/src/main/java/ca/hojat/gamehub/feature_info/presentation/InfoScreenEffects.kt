@@ -3,7 +3,7 @@ package ca.hojat.gamehub.feature_info.presentation
 import ca.hojat.gamehub.common_ui.base.events.Command
 import ca.hojat.gamehub.common_ui.base.events.Route
 
-internal sealed class InfoScreenCommand : Command {
+sealed class InfoScreenCommand : Command {
     data class OpenUrl(val url: String) : InfoScreenCommand()
 }
 

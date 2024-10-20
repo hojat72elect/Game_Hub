@@ -15,7 +15,7 @@ import javax.inject.Singleton
 
 @Singleton
 @BindType
-internal class ArticlesRefreshingThrottlerImpl @Inject constructor(
+class ArticlesRefreshingThrottlerImpl @Inject constructor(
     private val articlesPreferences: DataStore<Preferences>,
     private val timestampProvider: TimestampProvider
 ) : ArticlesRefreshingThrottler {

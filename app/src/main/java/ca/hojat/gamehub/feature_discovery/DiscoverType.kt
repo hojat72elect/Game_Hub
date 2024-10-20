@@ -7,7 +7,7 @@ import ca.hojat.gamehub.feature_discovery.widgets.DiscoverScreen
 /**
  * Any of the different categories in the [DiscoverScreen].
  */
-internal enum class DiscoverType(val id: Int) {
+enum class DiscoverType(val id: Int) {
     POPULAR(id = 1),
     RECENTLY_RELEASED(id = 2),
     COMING_SOON(id = 3),

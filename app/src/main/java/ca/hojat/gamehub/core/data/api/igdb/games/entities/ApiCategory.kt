@@ -20,7 +20,7 @@ enum class ApiCategory(val rawValue: Int) {
     EPISODE(rawValue = 6),
     SEASON(rawValue = 7);
 
-    internal companion object {
+    companion object {
 
         fun Int.asCategory(): ApiCategory {
             return values().find { it.rawValue == this } ?: UNKNOWN
@@ -28,7 +28,7 @@ enum class ApiCategory(val rawValue: Int) {
     }
 }
 
-internal object CategorySerializer : KSerializer<ApiCategory> {
+object CategorySerializer : KSerializer<ApiCategory> {
 
     override val descriptor = PrimitiveSerialDescriptor(
         checkNotNull(CategorySerializer::class.qualifiedName),

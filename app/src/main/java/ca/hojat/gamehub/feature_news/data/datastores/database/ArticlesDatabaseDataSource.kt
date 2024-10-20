@@ -17,7 +17,7 @@ import javax.inject.Singleton
 
 @Singleton
 @BindType
-internal class ArticlesDatabaseDataSource @Inject constructor(
+class ArticlesDatabaseDataSource @Inject constructor(
     private val articlesTable: ArticlesTable,
     private val dispatcherProvider: DispatcherProvider,
     private val dbArticleMapper: DbArticleMapper

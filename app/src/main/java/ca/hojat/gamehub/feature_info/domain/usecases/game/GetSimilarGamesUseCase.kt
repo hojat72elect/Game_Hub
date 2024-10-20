@@ -21,7 +21,7 @@ import javax.inject.Singleton
 /**
  * Returns a list of other games which are similar to this one.
  */
-internal interface GetSimilarGamesUseCase : UseCase<Params, Flow<DomainResult<List<Game>>>> {
+interface GetSimilarGamesUseCase : UseCase<Params, Flow<DomainResult<List<Game>>>> {
 
     data class Params(
         val game: Game,
@@ -31,7 +31,7 @@ internal interface GetSimilarGamesUseCase : UseCase<Params, Flow<DomainResult<Li
 
 @Singleton
 @BindType
-internal class GetSimilarGamesUseCaseImpl @Inject constructor(
+class GetSimilarGamesUseCaseImpl @Inject constructor(
     private val refreshSimilarGamesUseCase: RefreshSimilarGamesUseCase,
     private val gamesLocalDataSource: GamesLocalDataSource,
     private val dispatcherProvider: DispatcherProvider,

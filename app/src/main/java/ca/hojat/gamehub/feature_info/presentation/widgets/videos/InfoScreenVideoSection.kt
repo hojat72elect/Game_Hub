@@ -38,7 +38,7 @@ import ca.hojat.gamehub.common_ui.widgets.GameHubCard
 import ca.hojat.gamehub.feature_info.presentation.widgets.utils.InfoScreenSectionWithInnerList
 
 @Composable
-internal fun InfoScreenVideoSection(
+fun InfoScreenVideoSection(
     videos: List<InfoScreenVideoUiModel>,
     onVideClicked: (InfoScreenVideoUiModel) -> Unit,
 ) {

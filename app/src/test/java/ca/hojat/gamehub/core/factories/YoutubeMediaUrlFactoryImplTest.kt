@@ -10,7 +10,7 @@ private val VIDEO = Video(
     name = "name",
 )
 
-internal class YoutubeMediaUrlFactoryImplTest {
+class YoutubeMediaUrlFactoryImplTest {
 
     private lateinit var sut: YoutubeMediaUrlFactoryImpl
 

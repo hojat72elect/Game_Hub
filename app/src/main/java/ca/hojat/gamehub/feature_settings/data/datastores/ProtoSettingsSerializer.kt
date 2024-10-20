@@ -5,7 +5,7 @@ import ca.hojat.gamehub.feature_settings.domain.DomainSettings
 import java.io.InputStream
 import java.io.OutputStream
 
-internal object ProtoSettingsSerializer : Serializer<ProtoSettings> {
+object ProtoSettingsSerializer : Serializer<ProtoSettings> {
 
     override val defaultValue: ProtoSettings
         get() = ProtoSettings.newBuilder()

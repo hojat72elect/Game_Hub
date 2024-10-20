@@ -16,7 +16,7 @@ import ca.hojat.gamehub.common_ui.widgets.GameHubCard
 import ca.hojat.gamehub.common_ui.theme.GameHubTheme
 
 @Composable
-internal fun InfoScreenSection(
+fun InfoScreenSection(
     title: String,
     modifier: Modifier = Modifier,
     titleBottomPadding: Dp = GameHubTheme.spaces.spacing_2_5,
@@ -49,7 +49,7 @@ internal fun InfoScreenSection(
 }
 
 @Composable
-internal fun InfoScreenSectionWithInnerList(
+fun InfoScreenSectionWithInnerList(
     title: String,
     content: LazyListScope.() -> Unit,
 ) {

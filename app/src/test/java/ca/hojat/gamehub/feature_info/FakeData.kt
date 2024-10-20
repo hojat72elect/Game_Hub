@@ -36,20 +36,20 @@ val INVOLVED_COMPANY = InvolvedCompany(
     isSupporting = false,
 )
 
-internal val OBSERVE_GAME_LIKE_STATE_USE_CASE_PARAMS =
+val OBSERVE_GAME_LIKE_STATE_USE_CASE_PARAMS =
     ObserveLikeStateUseCase.Params(id = 10)
-internal val TOGGLE_GAME_LIKE_STATE_USE_CASE_PARAMS = ToggleLikeStateUseCase.Params(id = 10)
-internal val GET_GAME_USE_CASE_PARAMS = GetGameUseCase.Params(gameId = 10)
-internal val GET_COMPANY_DEVELOPED_GAMES_USE_CASE_PARAMS = GetCompanyDevelopedGamesUseCase.Params(
+val TOGGLE_GAME_LIKE_STATE_USE_CASE_PARAMS = ToggleLikeStateUseCase.Params(id = 10)
+val GET_GAME_USE_CASE_PARAMS = GetGameUseCase.Params(gameId = 10)
+val GET_COMPANY_DEVELOPED_GAMES_USE_CASE_PARAMS = GetCompanyDevelopedGamesUseCase.Params(
     COMPANY,
     PAGINATION,
 )
-internal val REFRESH_COMPANY_DEVELOPED_GAMES_USE_CASE_PARAMS =
+val REFRESH_COMPANY_DEVELOPED_GAMES_USE_CASE_PARAMS =
     RefreshCompanyDevelopedGamesUseCase.Params(
         COMPANY,
         PAGINATION,
     )
-internal val GET_SIMILAR_GAMES_USE_CASE_PARAMS =
+val GET_SIMILAR_GAMES_USE_CASE_PARAMS =
     GetSimilarGamesUseCase.Params(DOMAIN_GAME, PAGINATION)
-internal val REFRESH_SIMILAR_GAMES_USE_CASE_PARAMS =
+val REFRESH_SIMILAR_GAMES_USE_CASE_PARAMS =
     RefreshSimilarGamesUseCase.Params(DOMAIN_GAME, PAGINATION)

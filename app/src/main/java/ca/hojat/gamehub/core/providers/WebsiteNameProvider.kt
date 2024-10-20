@@ -11,7 +11,7 @@ interface WebsiteNameProvider {
 }
 
 @BindType
-internal class WebsiteNameProviderImpl @Inject constructor(
+class WebsiteNameProviderImpl @Inject constructor(
     private val stringProvider: StringProvider
 ) : WebsiteNameProvider {
 

@@ -17,7 +17,7 @@ interface StringProvider {
 }
 
 @BindType
-internal class StringProviderImpl @Inject constructor(
+class StringProviderImpl @Inject constructor(
     @ApplicationContext private val context: Context
 ) : StringProvider {
 

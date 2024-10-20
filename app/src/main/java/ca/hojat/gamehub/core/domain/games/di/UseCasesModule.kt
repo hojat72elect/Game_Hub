@@ -23,7 +23,7 @@ import dagger.hilt.components.SingletonComponent
 
 @Module
 @InstallIn(SingletonComponent::class)
-internal interface UseCasesModule {
+interface UseCasesModule {
 
     @Binds
     fun bindObserveComingSoonGamesUseCase(

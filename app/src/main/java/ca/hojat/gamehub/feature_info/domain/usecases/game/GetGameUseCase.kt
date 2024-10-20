@@ -18,14 +18,14 @@ import kotlinx.coroutines.flow.onEmpty
 import javax.inject.Inject
 import javax.inject.Singleton
 
-internal interface GetGameUseCase : UseCase<Params, Flow<DomainResult<Game>>> {
+interface GetGameUseCase : UseCase<Params, Flow<DomainResult<Game>>> {
 
     data class Params(val gameId: Int)
 }
 
 @Singleton
 @BindType
-internal class GetGameUseCaseImpl @Inject constructor(
+class GetGameUseCaseImpl @Inject constructor(
     private val gamesLocalDataSource: GamesLocalDataSource,
     private val dispatcherProvider: DispatcherProvider,
 ) : GetGameUseCase {

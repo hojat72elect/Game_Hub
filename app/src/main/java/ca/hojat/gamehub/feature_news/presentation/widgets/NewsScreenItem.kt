@@ -25,7 +25,7 @@ import ca.hojat.gamehub.R
 import ca.hojat.gamehub.common_ui.widgets.GameHubCard
 
 @Composable
-internal fun NewsScreenItem(
+fun NewsScreenItem(
     model: NewsItemUiModel,
     onClick: () -> Unit
 ) {
@@ -68,7 +68,7 @@ internal fun NewsScreenItem(
  * a modifier, it shows the photo.
  */
 @Composable
-internal fun Image(
+fun Image(
     imageUrl: String,
     modifier: Modifier
 ) {
@@ -93,7 +93,7 @@ internal fun Image(
  * a nice and informative line for showing the date.
  */
 @Composable
-internal fun Timestamp(publicationDate: String) {
+fun Timestamp(publicationDate: String) {
     Row(
         modifier = Modifier.padding(top = GameHubTheme.spaces.spacing_2_5),
         verticalAlignment = Alignment.CenterVertically

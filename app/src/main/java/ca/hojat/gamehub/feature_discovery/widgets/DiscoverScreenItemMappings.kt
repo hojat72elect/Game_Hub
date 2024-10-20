@@ -3,7 +3,7 @@ package ca.hojat.gamehub.feature_discovery.widgets
 import ca.hojat.gamehub.common_ui.widgets.categorypreview.GamesCategoryPreviewItemUiModel
 
 
-internal fun List<DiscoverScreenItemData>.mapToCategoryUiModels(): List<GamesCategoryPreviewItemUiModel> {
+fun List<DiscoverScreenItemData>.mapToCategoryUiModels(): List<GamesCategoryPreviewItemUiModel> {
     return map {
         GamesCategoryPreviewItemUiModel(
             id = it.id,
@@ -13,7 +13,7 @@ internal fun List<DiscoverScreenItemData>.mapToCategoryUiModels(): List<GamesCat
     }
 }
 
-internal fun GamesCategoryPreviewItemUiModel.mapToDiscoveryUiModel(): DiscoverScreenItemData {
+fun GamesCategoryPreviewItemUiModel.mapToDiscoveryUiModel(): DiscoverScreenItemData {
     return DiscoverScreenItemData(
         id = id,
         title = title,

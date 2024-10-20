@@ -7,11 +7,11 @@ import com.paulrybitskyi.hiltbinder.BindType
 import javax.inject.Inject
 import javax.inject.Singleton
 
-internal interface SaveSettingsUseCase : UseCase<Settings, Unit>
+interface SaveSettingsUseCase : UseCase<Settings, Unit>
 
 @Singleton
 @BindType
-internal class SaveSettingsUseCaseImpl @Inject constructor(
+class SaveSettingsUseCaseImpl @Inject constructor(
     private val localDataStore: SettingsLocalDataSource,
 ) : SaveSettingsUseCase {
 

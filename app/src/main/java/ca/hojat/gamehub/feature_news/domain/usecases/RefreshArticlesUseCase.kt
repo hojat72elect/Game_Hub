@@ -19,14 +19,14 @@ import javax.inject.Singleton
 /**
  * You give it an object of type [Params] and will receive a [Flow<DomainResult<List<Article>>>].
  */
-internal interface RefreshArticlesUseCase : ObservableUseCase<Params, DomainResult<List<Article>>> {
+interface RefreshArticlesUseCase : ObservableUseCase<Params, DomainResult<List<Article>>> {
 
     data class Params(val pagination: Pagination = Pagination())
 }
 
 @Singleton
 @BindType
-internal class RefreshArticlesUseCaseImpl @Inject constructor(
+class RefreshArticlesUseCaseImpl @Inject constructor(
     private val articlesDataStores: ArticlesDataStores,
     private val dispatcherProvider: DispatcherProvider,
     private val throttlerTools: ArticlesRefreshingThrottlerTools,

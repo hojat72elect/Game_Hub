@@ -69,7 +69,7 @@ private val CoverSpace = 40.dp
 private val InfoIconSize = 34.dp
 
 @Composable
-internal fun InfoScreenHeader(
+fun InfoScreenHeader(
     headerInfo: InfoScreenHeaderUiModel,
     onArtworkClicked: (artworkIndex: Int) -> Unit,
     onBackButtonClicked: () -> Unit,

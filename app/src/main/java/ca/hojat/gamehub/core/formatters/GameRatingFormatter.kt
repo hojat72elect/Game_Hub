@@ -11,7 +11,7 @@ interface GameRatingFormatter {
 }
 
 @BindType
-internal class GameRatingFormatterImpl @Inject constructor(
+class GameRatingFormatterImpl @Inject constructor(
     private val stringProvider: StringProvider
 ) : GameRatingFormatter {
 

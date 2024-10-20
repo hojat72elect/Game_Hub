@@ -30,7 +30,7 @@ private val SEARCH_GAMES_USE_CASE_PARAMS = SearchGamesUseCase.Params(
     pagination = PAGINATION,
 )
 
-internal class SearchGamesUseCaseImplTest {
+class SearchGamesUseCaseImplTest {
 
     @get:Rule
     val mainCoroutineRule = MainCoroutineRule()

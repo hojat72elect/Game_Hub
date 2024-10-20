@@ -6,7 +6,7 @@ import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Test
 
-internal class ApicalypseQueryBuilderImplTest {
+class ApicalypseQueryBuilderImplTest {
 
     private lateinit var sut: ApicalypseQueryBuilderImpl
 

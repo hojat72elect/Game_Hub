@@ -73,7 +73,7 @@ private fun ArticleScreen(
 }
 
 @Composable
-internal fun ArticleScreen(
+fun ArticleScreen(
     uiState: ArticleUiState,
     onBackPressed: () -> Unit,
     onShareButtonClicked: () -> Unit,

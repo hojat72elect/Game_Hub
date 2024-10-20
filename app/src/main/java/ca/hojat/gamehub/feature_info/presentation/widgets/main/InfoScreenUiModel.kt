@@ -10,7 +10,7 @@ import ca.hojat.gamehub.feature_info.presentation.widgets.screenshots.InfoScreen
 import ca.hojat.gamehub.feature_info.presentation.widgets.videos.InfoScreenVideoUiModel
 
 @Immutable
-internal data class InfoScreenUiModel(
+data class InfoScreenUiModel(
     val id: Int,
     val headerModel: InfoScreenHeaderUiModel,
     val videoModels: List<InfoScreenVideoUiModel>,

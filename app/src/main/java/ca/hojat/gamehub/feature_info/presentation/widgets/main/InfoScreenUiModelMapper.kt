@@ -14,14 +14,14 @@ import ca.hojat.gamehub.feature_info.presentation.widgets.videos.InfoScreenVideo
 import com.paulrybitskyi.hiltbinder.BindType
 import javax.inject.Inject
 
-internal interface InfoScreenUiModelMapper {
+interface InfoScreenUiModelMapper {
 
     fun mapToUiModel(infoScreenData: InfoScreenData): InfoScreenUiModel
 }
 
 @BindType(installIn = BindType.Component.VIEW_MODEL)
 @Suppress("LongParameterList")
-internal class InfoScreenUiModelMapperImpl @Inject constructor(
+class InfoScreenUiModelMapperImpl @Inject constructor(
     private val headerModelMapper: InfoScreenHeaderUiModelMapper,
     private val videoModelMapper: InfoScreenVideoUiModelMapper,
     private val screenshotModelMapper: InfoScreenShotUiModelMapper,

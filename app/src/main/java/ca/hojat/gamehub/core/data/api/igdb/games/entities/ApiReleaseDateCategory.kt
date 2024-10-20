@@ -22,7 +22,7 @@ enum class ApiReleaseDateCategory(val rawValue: Int) {
 
     TBD(rawValue = 7);
 
-    internal companion object {
+    companion object {
 
         fun Int.asReleaseDateCategory(): ApiReleaseDateCategory {
             return values().find { it.rawValue == this } ?: UNKNOWN
@@ -30,7 +30,7 @@ enum class ApiReleaseDateCategory(val rawValue: Int) {
     }
 }
 
-internal object ReleaseDateCategorySerializer : KSerializer<ApiReleaseDateCategory> {
+object ReleaseDateCategorySerializer : KSerializer<ApiReleaseDateCategory> {
 
     override val descriptor = PrimitiveSerialDescriptor(
         checkNotNull(ReleaseDateCategorySerializer::class.qualifiedName),

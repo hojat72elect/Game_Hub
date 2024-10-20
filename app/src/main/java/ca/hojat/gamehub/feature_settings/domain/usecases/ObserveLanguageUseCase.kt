@@ -16,7 +16,7 @@ interface ObserveLanguageUseCase : ObservableUseCase<Unit, Language>
 
 @Singleton
 @BindType
-internal class ObserveLanguageUseCaseImpl @Inject constructor(
+class ObserveLanguageUseCaseImpl @Inject constructor(
     private val observeSettingsUseCase: ObserveSettingsUseCase,
     private val dispatcherProvider: DispatcherProvider,
 ) : ObserveLanguageUseCase {

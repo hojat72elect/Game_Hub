@@ -10,7 +10,7 @@ import javax.inject.Inject
 interface TextSharer : ContentSharer<String>
 
 @BindType
-internal class TextSharerImpl @Inject constructor(
+class TextSharerImpl @Inject constructor(
     private val stringProvider: StringProvider
 ) : TextSharer {
 

@@ -10,7 +10,7 @@ import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 
 @Preview
 @Composable
-internal fun MainScreen() {
+fun MainScreen() {
     val navController = rememberAnimatedNavController()
     val currentScreen by navController.currentDestinationAsState()
 

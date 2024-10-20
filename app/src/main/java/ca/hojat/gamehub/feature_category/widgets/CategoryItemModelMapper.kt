@@ -12,9 +12,9 @@ import javax.inject.Inject
  */
 abstract class CategoryItemModelMapper {
 
-    internal abstract fun mapToUiModel(game: Game): CategoryUiModel
+    abstract fun mapToUiModel(game: Game): CategoryUiModel
 
-    internal fun mapToUiModels(
+    fun mapToUiModels(
         games: List<Game>,
     ): List<CategoryUiModel> {
         return games.map(::mapToUiModel)
@@ -22,7 +22,7 @@ abstract class CategoryItemModelMapper {
 }
 
 @BindType(installIn = BindType.Component.VIEW_MODEL)
-internal class CategoryItemModelMapperImpl @Inject constructor(
+class CategoryItemModelMapperImpl @Inject constructor(
     private val igdbImageUrlFactory: IgdbImageUrlFactory,
 ) : CategoryItemModelMapper() {
     override fun mapToUiModel(game: Game): CategoryUiModel {

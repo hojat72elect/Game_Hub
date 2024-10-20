@@ -10,15 +10,15 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import javax.inject.Inject
 
-internal const val PARAM_IMAGE_URL = "image-url"
-internal const val PARAM_TITLE = "title"
-internal const val PARAM_LEDE = "lede"
-internal const val PARAM_PUBLICATION_DATE = "publication-date"
-internal const val PARAM_ARTICLE_URL = "article-url"
-internal const val PARAM_BODY = "body"
+const val PARAM_IMAGE_URL = "image-url"
+const val PARAM_TITLE = "title"
+const val PARAM_LEDE = "lede"
+const val PARAM_PUBLICATION_DATE = "publication-date"
+const val PARAM_ARTICLE_URL = "article-url"
+const val PARAM_BODY = "body"
 
 @HiltViewModel
-internal class ArticleViewModel @Inject constructor(
+class ArticleViewModel @Inject constructor(
     private val stringProvider: StringProvider,
     private val savedStateHandle: SavedStateHandle,
 ) : BaseViewModel() {

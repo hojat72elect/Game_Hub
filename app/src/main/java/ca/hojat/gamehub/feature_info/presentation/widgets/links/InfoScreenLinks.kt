@@ -24,7 +24,7 @@ import ca.hojat.gamehub.feature_info.presentation.widgets.utils.InfoScreenSectio
 import java.util.Locale
 
 @Composable
-internal fun InfoScreenLinks(
+fun InfoScreenLinks(
     links: List<InfoScreenLinkUiModel>,
     onLinkClicked: (InfoScreenLinkUiModel) -> Unit,
 ) {

@@ -5,19 +5,19 @@ import ca.hojat.gamehub.common_ui.widgets.games.GameUiModel
 import ca.hojat.gamehub.common_ui.widgets.games.GamesUiState
 
 @Immutable
-internal data class GamesSearchUiState(
+data class GamesSearchUiState(
     val queryText: String,
     val gamesUiState: GamesUiState,
 )
 
-internal fun GamesUiState.toLoadingState(games: List<GameUiModel>): GamesUiState {
+fun GamesUiState.toLoadingState(games: List<GameUiModel>): GamesUiState {
     return copy(
         isLoading = true,
         games = games,
     )
 }
 
-internal fun GamesUiState.toSuccessState(
+fun GamesUiState.toSuccessState(
     infoTitle: String,
     games: List<GameUiModel>,
 ): GamesUiState {

@@ -12,7 +12,7 @@ import org.junit.Test
 import java.time.LocalDateTime
 import java.time.Month
 
-internal class RelativeDateFormatterImplTest {
+class RelativeDateFormatterImplTest {
 
     @MockK
     private lateinit var timeProvider: TimeProvider

@@ -40,7 +40,7 @@ private const val PARAM_GAME_ID = "game-id"
 
 @HiltViewModel
 @Suppress("LongParameterList")
-internal class InfoScreenViewModel @Inject constructor(
+class InfoScreenViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     @TransitionAnimationDuration
     transitionAnimationDuration: Long,

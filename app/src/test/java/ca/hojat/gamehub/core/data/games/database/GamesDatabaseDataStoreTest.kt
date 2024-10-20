@@ -22,7 +22,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
-internal class GamesDatabaseDataStoreTest {
+class GamesDatabaseDataStoreTest {
 
     @get:Rule
     val mainCoroutineRule = MainCoroutineRule()

@@ -9,7 +9,7 @@ import kotlinx.serialization.json.Json
 
 @Module
 @InstallIn(SingletonComponent::class)
-internal object CoreModule {
+object CoreModule {
 
     @Provides
     @Singleton

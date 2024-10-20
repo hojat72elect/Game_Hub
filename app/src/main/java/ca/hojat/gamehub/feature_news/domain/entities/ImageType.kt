@@ -3,7 +3,7 @@ package ca.hojat.gamehub.feature_news.domain.entities
 /**
  * I know these enums aren't used anywhere, but don't remove them.
  */
-internal enum class ImageType {
+enum class ImageType {
     UNKNOWN,
     SQUARE_TINY,
     SQUARE_SMALL,

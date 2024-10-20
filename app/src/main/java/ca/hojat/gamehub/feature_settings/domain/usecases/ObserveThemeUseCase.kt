@@ -16,7 +16,7 @@ interface ObserveThemeUseCase : ObservableUseCase<Unit, Theme>
 
 @Singleton
 @BindType
-internal class ObserveThemeUseCaseImpl @Inject constructor(
+class ObserveThemeUseCaseImpl @Inject constructor(
     private val observeSettingsUseCase: ObserveSettingsUseCase,
     private val dispatcherProvider: DispatcherProvider,
 ) : ObserveThemeUseCase {

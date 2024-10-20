@@ -1,6 +1,6 @@
 package ca.hojat.gamehub.feature_news.domain.entities
 
-internal data class Article(
+data class Article(
     val id: Int,
     val body: String,
     val title: String,

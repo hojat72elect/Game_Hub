@@ -15,7 +15,7 @@ import javax.inject.Singleton
 /**
  * You'll give it an object of type [Params] and will receive a [Flow<List<Article>>].
  */
-internal interface ObserveArticlesUseCase : ObservableUseCase<Params, List<Article>> {
+interface ObserveArticlesUseCase : ObservableUseCase<Params, List<Article>> {
 
     data class Params(
         val pagination: Pagination = Pagination()
@@ -24,7 +24,7 @@ internal interface ObserveArticlesUseCase : ObservableUseCase<Params, List<Artic
 
 @Singleton
 @BindType
-internal class ObserveArticlesUseCaseImpl @Inject constructor(
+class ObserveArticlesUseCaseImpl @Inject constructor(
     private val articlesLocalDataSource: ArticlesLocalDataSource,
     private val dispatcherProvider: DispatcherProvider,
 ) : ObserveArticlesUseCase {

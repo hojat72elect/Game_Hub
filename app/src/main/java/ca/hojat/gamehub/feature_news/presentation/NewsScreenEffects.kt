@@ -5,7 +5,7 @@ package ca.hojat.gamehub.feature_news.presentation
 import ca.hojat.gamehub.common_ui.base.events.Command
 import ca.hojat.gamehub.common_ui.base.events.Route
 
-internal sealed class NewsScreenCommand : Command {
+sealed class NewsScreenCommand : Command {
     data class OpenUrl(val url: String) : NewsScreenCommand()
 }
 

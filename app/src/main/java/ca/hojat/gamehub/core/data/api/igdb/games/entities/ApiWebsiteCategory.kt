@@ -27,7 +27,7 @@ enum class ApiWebsiteCategory(val rawValue: Int) {
     GOG(rawValue = 17),
     DISCORD(rawValue = 18);
 
-    internal companion object {
+    companion object {
 
         fun Int.asWebsiteCategory(): ApiWebsiteCategory {
             return values().find { it.rawValue == this } ?: UNKNOWN
@@ -35,7 +35,7 @@ enum class ApiWebsiteCategory(val rawValue: Int) {
     }
 }
 
-internal object WebsiteCategorySerializer : KSerializer<ApiWebsiteCategory> {
+object WebsiteCategorySerializer : KSerializer<ApiWebsiteCategory> {
 
     override val descriptor = PrimitiveSerialDescriptor(
         checkNotNull(WebsiteCategorySerializer::class.qualifiedName),

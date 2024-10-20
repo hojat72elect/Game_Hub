@@ -18,7 +18,7 @@ import dagger.multibindings.IntoMap
 
 @Module
 @InstallIn(ActivityRetainedComponent::class)
-internal object CategoryModule {
+object CategoryModule {
 
     @Provides
     @IntoMap

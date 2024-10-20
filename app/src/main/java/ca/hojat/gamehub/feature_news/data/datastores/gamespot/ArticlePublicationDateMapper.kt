@@ -1,13 +1,16 @@
 package ca.hojat.gamehub.feature_news.data.datastores.gamespot
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import java.time.LocalDateTime
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import javax.inject.Inject
 
-internal class ArticlePublicationDateMapper @Inject constructor() {
+@RequiresApi(Build.VERSION_CODES.O)
+class ArticlePublicationDateMapper @Inject constructor() {
 
-    private companion object {
+    companion object {
         private const val PUBLICATION_DATE_FORMAT = "yyyy-MM-dd HH:mm:ss"
 
         // The best we can do here, since the API does not return

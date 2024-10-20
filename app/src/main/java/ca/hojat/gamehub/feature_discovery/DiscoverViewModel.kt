@@ -38,7 +38,7 @@ import javax.inject.Inject
  * The only View Model that controls [DiscoverScreen].
  */
 @HiltViewModel
-internal class DiscoverViewModel @Inject constructor(
+class DiscoverViewModel @Inject constructor(
     private val useCases: DiscoverUseCases,
     private val uiModelMapper: DiscoverItemModelMapper,
     private val dispatcherProvider: DispatcherProvider,

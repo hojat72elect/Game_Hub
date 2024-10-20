@@ -5,7 +5,7 @@ import ca.hojat.gamehub.core.common_testing.domain.DOMAIN_GAME
 import org.junit.Before
 import org.junit.Test
 
-internal class LikeCountCalculatorImplTest {
+class LikeCountCalculatorImplTest {
 
     private lateinit var sut: LikeCountCalculatorImpl
 

@@ -16,7 +16,7 @@ import org.junit.Test
 
 private const val INITIAL_POSITION = 0
 
-internal class ImageViewerViewModelTest {
+class ImageViewerViewModelTest {
 
     @get:Rule
     val mainCoroutineRule = MainCoroutineRule(StandardTestDispatcher())

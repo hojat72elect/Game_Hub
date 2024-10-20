@@ -12,7 +12,7 @@ interface ErrorMapper {
 }
 
 @BindType
-internal class ErrorMapperImpl @Inject constructor(
+class ErrorMapperImpl @Inject constructor(
     private val stringProvider: StringProvider
 ) : ErrorMapper {
 

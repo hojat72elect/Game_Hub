@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit
 
 private const val CURRENT_TIMESTAMP = 10_000L
 
-internal class AuthExpiryTimeCalculatorTest {
+class AuthExpiryTimeCalculatorTest {
 
     @MockK
     private lateinit var timestampProvider: TimestampProvider

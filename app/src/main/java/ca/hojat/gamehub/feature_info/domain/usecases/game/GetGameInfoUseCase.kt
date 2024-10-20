@@ -18,14 +18,14 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 import javax.inject.Singleton
 
-internal interface GetGameInfoUseCase : UseCase<GetGameInfoUseCase.Params, Flow<InfoScreenData>> {
+interface GetGameInfoUseCase : UseCase<GetGameInfoUseCase.Params, Flow<InfoScreenData>> {
 
     data class Params(val gameId: Int)
 }
 
 @Singleton
 @BindType
-internal class GetGameInfoUseCaseImpl @Inject constructor(
+class GetGameInfoUseCaseImpl @Inject constructor(
     private val getGameUseCase: GetGameUseCase,
     private val observeLikeStateUseCase: ObserveLikeStateUseCase,
     private val getCompanyDevelopedGamesUseCase: GetCompanyDevelopedGamesUseCase,

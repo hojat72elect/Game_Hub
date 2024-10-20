@@ -35,7 +35,7 @@ import javax.inject.Inject
 private const val SUBSEQUENT_EMISSION_DELAY = 500L
 
 @HiltViewModel
-internal class LikesViewModel @Inject constructor(
+class LikesViewModel @Inject constructor(
     private val observeLikedGamesUseCase: ObserveLikedGamesUseCase,
     private val uiModelMapper: GameUiModelMapper,
     private val dispatcherProvider: DispatcherProvider,

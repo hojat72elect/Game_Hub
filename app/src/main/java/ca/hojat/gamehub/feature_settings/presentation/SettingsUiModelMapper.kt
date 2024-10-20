@@ -8,12 +8,12 @@ import ca.hojat.gamehub.feature_settings.domain.entities.Settings
 import com.paulrybitskyi.hiltbinder.BindType
 import javax.inject.Inject
 
-internal interface SettingsUiModelMapper {
+interface SettingsUiModelMapper {
     fun mapToUiModels(settings: Settings): List<SettingsSectionUiModel>
 }
 
 @BindType(installIn = BindType.Component.VIEW_MODEL)
-internal class SettingsUiModelMapperImpl @Inject constructor(
+class SettingsUiModelMapperImpl @Inject constructor(
     private val stringProvider: StringProvider,
     private val versionNameProvider: VersionNameProvider,
 ) : SettingsUiModelMapper {

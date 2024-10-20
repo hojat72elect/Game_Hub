@@ -16,7 +16,7 @@ import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 import javax.inject.Singleton
 
-internal interface GetGameImageUrlsUseCase : UseCase<Params, Flow<DomainResult<List<String>>>> {
+interface GetGameImageUrlsUseCase : UseCase<Params, Flow<DomainResult<List<String>>>> {
 
     data class Params(
         val gameId: Int,
@@ -26,7 +26,7 @@ internal interface GetGameImageUrlsUseCase : UseCase<Params, Flow<DomainResult<L
 
 @Singleton
 @BindType
-internal class GetGameImageUrlsUseCaseImpl @Inject constructor(
+class GetGameImageUrlsUseCaseImpl @Inject constructor(
     private val getGameUseCase: GetGameUseCase,
     private val gameUrlFactory: ImageViewerGameUrlFactory,
     private val dispatcherProvider: DispatcherProvider,

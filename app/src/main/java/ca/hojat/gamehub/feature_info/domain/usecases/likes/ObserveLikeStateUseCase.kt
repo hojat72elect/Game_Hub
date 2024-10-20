@@ -10,13 +10,13 @@ import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 import javax.inject.Singleton
 
-internal interface ObserveLikeStateUseCase : ObservableUseCase<Params, Boolean> {
+interface ObserveLikeStateUseCase : ObservableUseCase<Params, Boolean> {
     data class Params(val id: Int)
 }
 
 @Singleton
 @BindType
-internal class ObserveLikeStateUseCaseImpl @Inject constructor(
+class ObserveLikeStateUseCaseImpl @Inject constructor(
     private val likedGamesLocalDataSource: LikedGamesLocalDataSource,
     private val dispatcherProvider: DispatcherProvider,
 ) : ObserveLikeStateUseCase {

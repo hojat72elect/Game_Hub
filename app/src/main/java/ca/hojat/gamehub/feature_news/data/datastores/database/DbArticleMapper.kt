@@ -6,7 +6,7 @@ import ca.hojat.gamehub.feature_news.domain.DomainArticle
 import ca.hojat.gamehub.feature_news.domain.DomainImageType
 import javax.inject.Inject
 
-internal class DbArticleMapper @Inject constructor() {
+class DbArticleMapper @Inject constructor() {
 
     fun mapToDatabaseArticle(dataArticle: DomainArticle): DbArticle {
         return DbArticle(
@@ -45,10 +45,10 @@ internal class DbArticleMapper @Inject constructor() {
     }
 }
 
-internal fun DbArticleMapper.mapToDatabaseArticles(dataArticles: List<DomainArticle>): List<DbArticle> {
+fun DbArticleMapper.mapToDatabaseArticles(dataArticles: List<DomainArticle>): List<DbArticle> {
     return dataArticles.map(::mapToDatabaseArticle)
 }
 
-internal fun DbArticleMapper.mapToDomainArticles(databaseArticles: List<DbArticle>): List<DomainArticle> {
+fun DbArticleMapper.mapToDomainArticles(databaseArticles: List<DbArticle>): List<DomainArticle> {
     return databaseArticles.map(::mapToDomainArticle)
 }

@@ -7,13 +7,13 @@ import com.paulrybitskyi.hiltbinder.BindType
 import javax.inject.Inject
 import javax.inject.Singleton
 
-internal interface ToggleLikeStateUseCase : UseCase<Params, Unit> {
+interface ToggleLikeStateUseCase : UseCase<Params, Unit> {
     data class Params(val id: Int)
 }
 
 @Singleton
 @BindType
-internal class ToggleLikeStateUseCaseImpl @Inject constructor(
+class ToggleLikeStateUseCaseImpl @Inject constructor(
     private val likedGamesLocalDataSource: LikedGamesLocalDataSource,
 ) : ToggleLikeStateUseCase {
 

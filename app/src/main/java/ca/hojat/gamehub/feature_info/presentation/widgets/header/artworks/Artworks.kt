@@ -19,7 +19,7 @@ import com.google.accompanist.pager.rememberPagerState
 
 
 @Composable
-internal fun Artworks(
+fun Artworks(
     artworks: List<InfoScreenArtworkUiModel>,
     isScrollingEnabled: Boolean,
     modifier: Modifier,

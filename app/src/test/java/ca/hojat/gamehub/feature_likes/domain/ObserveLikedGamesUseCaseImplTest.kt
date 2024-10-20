@@ -17,7 +17,7 @@ import org.junit.Test
 
 private val OBSERVE_GAMES_USE_CASE_PARAMS = ObserveUseCaseParams()
 
-internal class ObserveLikedGamesUseCaseImplTest {
+class ObserveLikedGamesUseCaseImplTest {
 
     @get:Rule
     val mainCoroutineRule = MainCoroutineRule()

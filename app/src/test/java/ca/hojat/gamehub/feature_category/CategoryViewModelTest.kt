@@ -27,7 +27,7 @@ import org.junit.Rule
 import org.junit.Test
 import javax.inject.Provider
 
-internal class CategoryViewModelTest {
+class CategoryViewModelTest {
 
     @get:Rule
     val mainCoroutineRule = MainCoroutineRule(StandardTestDispatcher())

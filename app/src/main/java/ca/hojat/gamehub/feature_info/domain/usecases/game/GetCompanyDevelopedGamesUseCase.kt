@@ -22,7 +22,7 @@ import javax.inject.Singleton
 /**
  * Returns a list of other games developed by the company that has made this game.
  */
-internal interface GetCompanyDevelopedGamesUseCase :
+interface GetCompanyDevelopedGamesUseCase :
     UseCase<Params, Flow<DomainResult<List<Game>>>> {
 
     data class Params(
@@ -33,7 +33,7 @@ internal interface GetCompanyDevelopedGamesUseCase :
 
 @Singleton
 @BindType
-internal class GetCompanyDevelopedGamesUseCaseImpl @Inject constructor(
+class GetCompanyDevelopedGamesUseCaseImpl @Inject constructor(
     private val refreshCompanyDevelopedGamesUseCase: RefreshCompanyDevelopedGamesUseCase,
     private val gamesLocalDataSource: GamesLocalDataSource,
     private val dispatcherProvider: DispatcherProvider,

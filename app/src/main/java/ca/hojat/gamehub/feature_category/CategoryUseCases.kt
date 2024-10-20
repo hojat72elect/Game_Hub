@@ -6,7 +6,7 @@ import ca.hojat.gamehub.feature_category.di.CategoryKey.Type
 import javax.inject.Inject
 import javax.inject.Provider
 
-internal class CategoryUseCases @Inject constructor(
+class CategoryUseCases @Inject constructor(
     private val observeGamesUseCasesMap: Map<Type, @JvmSuppressWildcards Provider<ObservableGamesUseCase>>,
     private val refreshGamesUseCasesMap: Map<Type, @JvmSuppressWildcards Provider<RefreshableGamesUseCase>>
 ) {

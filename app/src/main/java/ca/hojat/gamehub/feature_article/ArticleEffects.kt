@@ -3,7 +3,7 @@ package ca.hojat.gamehub.feature_article
 import ca.hojat.gamehub.common_ui.base.events.Command
 import ca.hojat.gamehub.common_ui.base.events.Route
 
-internal sealed class ArticleCommand : Command {
+sealed class ArticleCommand : Command {
     /**
      * The command for sharing the URL of this news article.
      */

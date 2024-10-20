@@ -30,7 +30,7 @@ import org.junit.Test
 
 private val USE_CASE_PARAMS = RefreshArticlesUseCase.Params()
 
-internal class RefreshArticlesUseCaseImplTest {
+class RefreshArticlesUseCaseImplTest {
 
     @get:Rule
     val mainCoroutineRule = MainCoroutineRule()

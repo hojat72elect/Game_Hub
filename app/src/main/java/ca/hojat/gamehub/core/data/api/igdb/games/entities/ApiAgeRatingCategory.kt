@@ -14,7 +14,7 @@ enum class ApiAgeRatingCategory(val rawValue: Int) {
     ESRB(rawValue = 1),
     PEGI(rawValue = 2);
 
-    internal companion object {
+    companion object {
 
         fun Int.asAgeRatingCategory(): ApiAgeRatingCategory {
             return values().find { it.rawValue == this } ?: UNKNOWN
@@ -22,7 +22,7 @@ enum class ApiAgeRatingCategory(val rawValue: Int) {
     }
 }
 
-internal object AgeRatingCategorySerializer : KSerializer<ApiAgeRatingCategory> {
+object AgeRatingCategorySerializer : KSerializer<ApiAgeRatingCategory> {
 
     override val descriptor = PrimitiveSerialDescriptor(
         checkNotNull(AgeRatingCategorySerializer::class.qualifiedName),

@@ -18,7 +18,7 @@ import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 import javax.inject.Singleton
 
-internal interface SearchGamesUseCase : UseCase<Params, Flow<DomainResult<List<Game>>>> {
+interface SearchGamesUseCase : UseCase<Params, Flow<DomainResult<List<Game>>>> {
 
     data class Params(
         val searchQuery: String,
@@ -28,7 +28,7 @@ internal interface SearchGamesUseCase : UseCase<Params, Flow<DomainResult<List<G
 
 @Singleton
 @BindType
-internal class SearchGamesUseCaseImpl @Inject constructor(
+class SearchGamesUseCaseImpl @Inject constructor(
     private val gamesRepository: GamesRepository,
     private val dispatcherProvider: DispatcherProvider,
     private val networkStateProvider: NetworkStateProvider,

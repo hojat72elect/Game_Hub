@@ -21,7 +21,7 @@ import org.junit.Test
 private const val GAME_ID = 100
 private const val ANOTHER_GAME_ID = 110
 
-internal class LikedGamesDatabaseDataStoreTest {
+class LikedGamesDatabaseDataStoreTest {
 
     @get:Rule
     val mainCoroutineRule = MainCoroutineRule()

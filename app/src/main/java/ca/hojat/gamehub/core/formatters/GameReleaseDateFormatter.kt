@@ -17,7 +17,7 @@ interface GameReleaseDateFormatter {
 }
 
 @BindType
-internal class GameReleaseDateFormatterImpl @Inject constructor(
+class GameReleaseDateFormatterImpl @Inject constructor(
     private val stringProvider: StringProvider,
     private val relativeDateFormatter: RelativeDateFormatter
 ) : GameReleaseDateFormatter {

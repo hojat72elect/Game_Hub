@@ -19,7 +19,7 @@ import org.junit.Test
 
 private val USE_CASE_PARAMS = ObserveArticlesUseCase.Params(PAGINATION)
 
-internal class ObserveArticlesUseCaseImplTest {
+class ObserveArticlesUseCaseImplTest {
 
     @get:Rule
     val mainCoroutineRule = MainCoroutineRule()

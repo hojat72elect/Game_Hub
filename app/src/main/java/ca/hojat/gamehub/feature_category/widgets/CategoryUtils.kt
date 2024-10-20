@@ -16,7 +16,7 @@ private const val ITEM_HEIGHT_TO_WIDTH_RATIO = 1.366f
  * The config for Grid of items in [CategoryScreen]
  */
 @Immutable
-internal data class GridConfig(
+data class GridConfig(
     val spanCount: Int,
     val itemSpacingInPx: Float,
     val itemWidthInDp: Dp,
@@ -24,7 +24,7 @@ internal data class GridConfig(
 )
 
 @Composable
-internal fun rememberGridConfig(): GridConfig {
+fun rememberGridConfig(): GridConfig {
     val density = LocalDensity.current
     val configuration = LocalConfiguration.current
     val gridItemSpacingInDp = GameHubTheme.spaces.spacing_0_5

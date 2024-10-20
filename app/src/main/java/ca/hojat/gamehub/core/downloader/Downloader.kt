@@ -21,7 +21,7 @@ interface Downloader {
 }
 
 @BindType
-internal class DownloaderImpl @Inject constructor(
+class DownloaderImpl @Inject constructor(
     @ApplicationContext private val context: Context,
 ) : Downloader {
 

@@ -20,7 +20,7 @@ private val PROTO_SETTINGS = ProtoSettings.newBuilder()
     .setThemeName(DOMAIN_SETTINGS.theme.name)
     .build()
 
-internal class SettingsFileDataSourceTest {
+class SettingsFileDataSourceTest {
 
     @MockK
     private lateinit var protoDataStore: DataStore<ProtoSettings>

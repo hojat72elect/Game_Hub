@@ -3,7 +3,7 @@ package ca.hojat.gamehub.feature_discovery.widgets
 import androidx.compose.runtime.Immutable
 
 @Immutable
-internal data class DiscoverScreenUiModel(
+data class DiscoverScreenUiModel(
     val id: Int,
     val categoryName: String,
     val title: String,
@@ -11,7 +11,7 @@ internal data class DiscoverScreenUiModel(
     val items: List<DiscoverScreenItemData>,
 )
 
-internal fun List<DiscoverScreenUiModel>.toSuccessState(
+fun List<DiscoverScreenUiModel>.toSuccessState(
     items: List<List<DiscoverScreenItemData>>,
 ): List<DiscoverScreenUiModel> {
     return mapIndexed { index, itemModel ->
@@ -19,10 +19,10 @@ internal fun List<DiscoverScreenUiModel>.toSuccessState(
     }
 }
 
-internal fun List<DiscoverScreenUiModel>.showProgressBar(): List<DiscoverScreenUiModel> {
+fun List<DiscoverScreenUiModel>.showProgressBar(): List<DiscoverScreenUiModel> {
     return map { itemModel -> itemModel.copy(isProgressBarVisible = true) }
 }
 
-internal fun List<DiscoverScreenUiModel>.hideProgressBar(): List<DiscoverScreenUiModel> {
+fun List<DiscoverScreenUiModel>.hideProgressBar(): List<DiscoverScreenUiModel> {
     return map { itemModel -> itemModel.copy(isProgressBarVisible = false) }
 }

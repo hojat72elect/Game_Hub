@@ -7,7 +7,7 @@ import org.junit.Assert.assertThrows
 import org.junit.Before
 import org.junit.Test
 
-internal class TwitchErrorMessageExtractorTest {
+class TwitchErrorMessageExtractorTest {
 
     private lateinit var sut: TwitchErrorMessageExtractor
 

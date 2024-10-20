@@ -16,7 +16,7 @@ enum class ApiImageType(val rawType: String) {
     SCREEN_TINY("screen_tiny"),
     ORIGINAL("original");
 
-    internal companion object {
+    companion object {
 
         fun String.asImageType(): ApiImageType {
             return values().find { it.rawType == this } ?: UNKNOWN

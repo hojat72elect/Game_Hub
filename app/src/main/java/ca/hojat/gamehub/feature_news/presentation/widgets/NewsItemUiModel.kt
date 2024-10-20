@@ -3,7 +3,7 @@ package ca.hojat.gamehub.feature_news.presentation.widgets
 import androidx.compose.runtime.Immutable
 
 @Immutable
-internal data class NewsItemUiModel(
+data class NewsItemUiModel(
     val id: Int,
     val imageUrl: String?,
     val title: String,

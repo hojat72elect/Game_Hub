@@ -16,11 +16,11 @@ import javax.inject.Singleton
  * so that's why I'm not renaming it. It can only be used for getting a
  * list of liked games.
  */
-internal interface ObserveLikedGamesUseCase : ObservableGamesUseCase
+interface ObserveLikedGamesUseCase : ObservableGamesUseCase
 
 @Singleton
 @BindType
-internal class ObserveLikedGamesUseCaseImpl @Inject constructor(
+class ObserveLikedGamesUseCaseImpl @Inject constructor(
     private val likedGamesLocalDataSource: LikedGamesLocalDataSource,
     private val dispatcherProvider: DispatcherProvider,
 ) : ObserveLikedGamesUseCase {

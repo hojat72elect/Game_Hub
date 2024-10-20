@@ -11,12 +11,12 @@ import ca.hojat.gamehub.core.domain.entities.Game
 import com.paulrybitskyi.hiltbinder.BindType
 import javax.inject.Inject
 
-internal interface InfoScreenSimilarGamesUiModelMapper {
+interface InfoScreenSimilarGamesUiModelMapper {
     fun mapToUiModel(similarGames: List<Game>): RelatedGamesUiModel?
 }
 
 @BindType(installIn = BindType.Component.VIEW_MODEL)
-internal class InfoScreenSimilarGamesUiModelMapperImpl @Inject constructor(
+class InfoScreenSimilarGamesUiModelMapperImpl @Inject constructor(
     private val stringProvider: StringProvider,
     private val igdbImageUrlFactory: IgdbImageUrlFactory,
 ) : InfoScreenSimilarGamesUiModelMapper {

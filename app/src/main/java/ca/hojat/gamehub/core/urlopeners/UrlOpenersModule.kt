@@ -7,7 +7,7 @@ import dagger.hilt.components.SingletonComponent
 
 @Module
 @InstallIn(SingletonComponent::class)
-internal object UrlOpenersModule {
+object UrlOpenersModule {
 
     /**
      * This function provides a list of all the url openers; they will be handed over to

@@ -23,7 +23,7 @@ import ca.hojat.gamehub.common_ui.theme.GameHubTheme
 private const val BOTTOM_BAR_ANIMATION_DURATION = 300
 
 @Composable
-internal fun BottomBar(
+fun BottomBar(
     navController: NavHostController,
     currentDestination: Destination,
 ) {

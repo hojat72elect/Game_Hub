@@ -4,7 +4,7 @@ import ca.hojat.gamehub.core.domain.entities.Image
 import com.paulrybitskyi.hiltbinder.BindType
 import javax.inject.Inject
 
-enum class IgdbImageSize(internal val rawSize: String) {
+enum class IgdbImageSize(val rawSize: String) {
     SMALL_COVER("cover_small"), BIG_COVER("cover_big"),
 
     MEDIUM_SCREENSHOT("screenshot_med"), BIG_SCREENSHOT("screenshot_big"), HUGE_SCREENSHOT("screenshot_huge"),
@@ -16,7 +16,7 @@ enum class IgdbImageSize(internal val rawSize: String) {
     HD("720p"), FULL_HD("1080p")
 }
 
-enum class IgdbImageExtension(internal val rawExtension: String) {
+enum class IgdbImageExtension(val rawExtension: String) {
     JPG("jpg"), PNG("png")
 }
 
@@ -42,7 +42,7 @@ fun IgdbImageUrlFactory.createUrls(
 }
 
 @BindType
-internal class IgdbImageUrlFactoryImpl @Inject constructor() : IgdbImageUrlFactory {
+class IgdbImageUrlFactoryImpl @Inject constructor() : IgdbImageUrlFactory {
 
     private companion object {
         private const val IMAGE_URL_TEMPLATE =

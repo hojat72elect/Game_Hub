@@ -6,7 +6,7 @@ import androidx.compose.runtime.Immutable
  *@param gameName : The name of the game for which we are showing the photos.
  */
 @Immutable
-internal data class ImageViewerUiState(
+data class ImageViewerUiState(
     val gameName: String,
     val toolbarTitle: String,
     val imageUrls: List<String>,

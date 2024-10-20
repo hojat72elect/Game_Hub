@@ -5,7 +5,7 @@ import dagger.MapKey
 @MapKey
 @Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
 @Retention(AnnotationRetention.BINARY)
-internal annotation class CategoryKey(val type: Type) {
+annotation class CategoryKey(val type: Type) {
 
     enum class Type {
         POPULAR,

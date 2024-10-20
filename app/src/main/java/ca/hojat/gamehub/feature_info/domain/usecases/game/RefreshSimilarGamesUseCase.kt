@@ -17,7 +17,7 @@ import kotlinx.coroutines.withContext
 import javax.inject.Inject
 import javax.inject.Singleton
 
-internal interface RefreshSimilarGamesUseCase : UseCase<Params, Flow<DomainResult<List<Game>>>> {
+interface RefreshSimilarGamesUseCase : UseCase<Params, Flow<DomainResult<List<Game>>>> {
 
     data class Params(
         val game: Game,
@@ -27,7 +27,7 @@ internal interface RefreshSimilarGamesUseCase : UseCase<Params, Flow<DomainResul
 
 @Singleton
 @BindType
-internal class RefreshSimilarGamesUseCaseImpl @Inject constructor(
+class RefreshSimilarGamesUseCaseImpl @Inject constructor(
     private val gamesRepository: GamesRepository,
     private val dispatcherProvider: DispatcherProvider,
     private val throttlerTools: GamesRefreshingThrottlerTools,

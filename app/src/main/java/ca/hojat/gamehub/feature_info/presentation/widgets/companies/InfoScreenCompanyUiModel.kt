@@ -3,7 +3,7 @@ package ca.hojat.gamehub.feature_info.presentation.widgets.companies
 import androidx.compose.runtime.Immutable
 
 @Immutable
-internal data class InfoScreenCompanyUiModel(
+data class InfoScreenCompanyUiModel(
     val id: Int,
     val logoUrl: String?,
     val logoWidth: Int?,

@@ -9,9 +9,9 @@ import com.paulrybitskyi.hiltbinder.BindType
 import javax.inject.Inject
 
 abstract class InfoScreenVideoUiModelMapper {
-    internal abstract fun mapToUiModel(video: Video): InfoScreenVideoUiModel?
+    abstract fun mapToUiModel(video: Video): InfoScreenVideoUiModel?
 
-    internal fun mapToUiModels(
+    fun mapToUiModels(
         videos: List<Video>,
     ): List<InfoScreenVideoUiModel> {
         if (videos.isEmpty()) return emptyList()
@@ -21,7 +21,7 @@ abstract class InfoScreenVideoUiModelMapper {
 }
 
 @BindType(installIn = BindType.Component.VIEW_MODEL)
-internal class InfoScreenVideoUiModelMapperImpl @Inject constructor(
+class InfoScreenVideoUiModelMapperImpl @Inject constructor(
     private val youtubeMediaUrlFactory: YoutubeMediaUrlFactory,
     private val stringProvider: StringProvider,
 ) : InfoScreenVideoUiModelMapper() {

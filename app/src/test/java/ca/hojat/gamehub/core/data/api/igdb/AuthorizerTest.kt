@@ -7,7 +7,7 @@ import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Test
 
-internal class AuthorizerTest {
+class AuthorizerTest {
 
     private companion object {
         const val ACCESS_TOKEN = "access_token"

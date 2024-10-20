@@ -24,7 +24,7 @@ enum class ApiAgeRatingType(val rawValue: Int) {
     M(rawValue = 11),
     AO(rawValue = 12);
 
-    internal companion object {
+    companion object {
 
         fun Int.asAgeRatingType(): ApiAgeRatingType {
             return values().find { it.rawValue == this } ?: UNKNOWN
@@ -32,7 +32,7 @@ enum class ApiAgeRatingType(val rawValue: Int) {
     }
 }
 
-internal object AgeRatingTypeSerializer : KSerializer<ApiAgeRatingType> {
+object AgeRatingTypeSerializer : KSerializer<ApiAgeRatingType> {
 
     override val descriptor = PrimitiveSerialDescriptor(
         checkNotNull(AgeRatingTypeSerializer::class.qualifiedName),

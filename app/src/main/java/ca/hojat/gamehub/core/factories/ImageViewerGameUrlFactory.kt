@@ -11,7 +11,7 @@ interface ImageViewerGameUrlFactory {
 }
 
 @BindType
-internal class ImageViewerGameUrlFactoryImpl @Inject constructor(
+class ImageViewerGameUrlFactoryImpl @Inject constructor(
     private val igdbImageUrlFactory: IgdbImageUrlFactory
 ) : ImageViewerGameUrlFactory {
 

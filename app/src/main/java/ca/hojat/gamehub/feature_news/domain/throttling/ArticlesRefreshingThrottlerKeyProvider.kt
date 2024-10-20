@@ -5,13 +5,13 @@ import com.paulrybitskyi.hiltbinder.BindType
 import javax.inject.Inject
 import javax.inject.Singleton
 
-internal interface ArticlesRefreshingThrottlerKeyProvider {
+interface ArticlesRefreshingThrottlerKeyProvider {
     fun provideArticlesKey(pagination: Pagination): String
 }
 
 @Singleton
 @BindType
-internal class ArticlesRefreshingThrottlerKeyProviderImpl @Inject constructor() :
+class ArticlesRefreshingThrottlerKeyProviderImpl @Inject constructor() :
     ArticlesRefreshingThrottlerKeyProvider {
 
     override fun provideArticlesKey(pagination: Pagination): String {

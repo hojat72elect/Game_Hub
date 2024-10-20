@@ -7,13 +7,13 @@ import ca.hojat.gamehub.core.providers.WebsiteNameProvider
 import com.paulrybitskyi.hiltbinder.BindType
 import javax.inject.Inject
 
-internal interface InfoScreenLinkUiModelMapper {
+interface InfoScreenLinkUiModelMapper {
     fun mapToUiModel(website: Website): InfoScreenLinkUiModel?
     fun mapToUiModels(websites: List<Website>): List<InfoScreenLinkUiModel>
 }
 
 @BindType(installIn = BindType.Component.VIEW_MODEL)
-internal class InfoScreenLinkUiModelMapperImpl @Inject constructor(
+class InfoScreenLinkUiModelMapperImpl @Inject constructor(
     private val websiteNameProvider: WebsiteNameProvider,
     private val websiteIconProvider: WebsiteIconProvider,
 ) : InfoScreenLinkUiModelMapper {

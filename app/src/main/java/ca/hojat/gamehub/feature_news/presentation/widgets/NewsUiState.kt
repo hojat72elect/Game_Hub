@@ -4,13 +4,13 @@ import androidx.compose.runtime.Immutable
 import ca.hojat.gamehub.common_ui.widgets.FiniteUiState
 
 @Immutable
-internal data class NewsUiState(
+data class NewsUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val news: List<NewsItemUiModel> = emptyList(),
 ) {
 
-    internal val finiteUiState: FiniteUiState
+    val finiteUiState: FiniteUiState
         get() = when {
             isInEmptyState -> FiniteUiState.EMPTY
             isLoading -> FiniteUiState.LOADING
@@ -24,25 +24,25 @@ internal data class NewsUiState(
     private val isInSuccessState: Boolean
         get() = news.isNotEmpty()
 
-    internal fun toEmptyState(): NewsUiState {
+    fun toEmptyState(): NewsUiState {
         return copy(isLoading = false, news = emptyList())
     }
 
-    internal fun toLoadingState(): NewsUiState {
+    fun toLoadingState(): NewsUiState {
         return copy(isLoading = true)
     }
 
-    internal fun toSuccessState(
+    fun toSuccessState(
         news: List<NewsItemUiModel>
     ): NewsUiState {
         return copy(isLoading = false, news = news)
     }
 
-    internal fun enableRefreshing(): NewsUiState {
+    fun enableRefreshing(): NewsUiState {
         return copy(isRefreshing = true)
     }
 
-    internal fun disableRefreshing(): NewsUiState {
+    fun disableRefreshing(): NewsUiState {
         return copy(isRefreshing = false)
     }
 

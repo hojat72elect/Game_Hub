@@ -3,7 +3,7 @@ package ca.hojat.gamehub.feature_category
 import ca.hojat.gamehub.R
 import ca.hojat.gamehub.feature_category.di.CategoryKey
 
-internal enum class CategoryType {
+enum class CategoryType {
     POPULAR,
     RECENTLY_RELEASED,
     COMING_SOON,

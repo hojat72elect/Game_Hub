@@ -4,7 +4,7 @@ import ca.hojat.gamehub.core.domain.entities.Video
 import com.paulrybitskyi.hiltbinder.BindType
 import javax.inject.Inject
 
-enum class YoutubeThumbnailSize(internal val rawSize: String) {
+enum class YoutubeThumbnailSize(val rawSize: String) {
     DEFAULT("default"), // 120x90
     MEDIUM("mqdefault"), // 320x180
     HIGH("hqdefault"), // 480x360
@@ -18,7 +18,7 @@ interface YoutubeMediaUrlFactory {
 }
 
 @BindType
-internal class YoutubeMediaUrlFactoryImpl @Inject constructor() : YoutubeMediaUrlFactory {
+class YoutubeMediaUrlFactoryImpl @Inject constructor() : YoutubeMediaUrlFactory {
 
     private companion object {
         private const val THUMBNAIL_URL_TEMPLATE = "https://img.youtube.com/vi/%s/%s.jpg"

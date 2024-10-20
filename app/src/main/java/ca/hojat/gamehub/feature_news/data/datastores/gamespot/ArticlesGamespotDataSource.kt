@@ -1,5 +1,7 @@
 package ca.hojat.gamehub.feature_news.data.datastores.gamespot
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import ca.hojat.gamehub.core.data.api.ApiErrorMapper
 import ca.hojat.gamehub.core.domain.DomainResult
 import ca.hojat.gamehub.core.domain.common.DispatcherProvider
@@ -15,9 +17,10 @@ import kotlinx.coroutines.withContext
 import javax.inject.Inject
 import javax.inject.Singleton
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Singleton
 @BindType
-internal class ArticlesGamespotDataSource @Inject constructor(
+class ArticlesGamespotDataSource @Inject constructor(
     private val articlesEndpoint: ArticlesEndpoint,
     private val dispatcherProvider: DispatcherProvider,
     private val apiArticleMapper: GamespotArticleMapper,
@@ -29,6 +32,7 @@ internal class ArticlesGamespotDataSource @Inject constructor(
             .getArticles(pagination.offset, pagination.limit)
             .toDataStoreResult()
     }
+
 
     private suspend fun ApiResult<List<ApiArticle>>.toDataStoreResult(): DomainResult<List<Article>> {
         return withContext(dispatcherProvider.computation) {

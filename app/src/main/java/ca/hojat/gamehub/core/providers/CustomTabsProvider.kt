@@ -16,7 +16,7 @@ interface CustomTabsProvider {
 
 @Singleton
 @BindType
-internal class CustomTabsProviderImpl @Inject constructor(
+class CustomTabsProviderImpl @Inject constructor(
     @ApplicationContext private val context: Context
 ) : CustomTabsProvider {
 

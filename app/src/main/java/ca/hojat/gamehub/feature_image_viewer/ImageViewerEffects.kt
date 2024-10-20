@@ -3,7 +3,7 @@ package ca.hojat.gamehub.feature_image_viewer
 import ca.hojat.gamehub.common_ui.base.events.Command
 import ca.hojat.gamehub.common_ui.base.events.Route
 
-internal sealed class ImageViewerCommand : Command {
+sealed class ImageViewerCommand : Command {
     /**
      * The command that ViewModel sends when user
      * wants to share a text with other users.

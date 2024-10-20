@@ -11,7 +11,7 @@ import javax.inject.Singleton
 
 @Singleton
 @BindType
-internal class SettingsFileDataSource @Inject constructor(
+class SettingsFileDataSource @Inject constructor(
     private val protoDataSource: DataStore<ProtoSettings>,
     private val protoMapper: ProtoSettingsMapper,
 ) : SettingsLocalDataSource {

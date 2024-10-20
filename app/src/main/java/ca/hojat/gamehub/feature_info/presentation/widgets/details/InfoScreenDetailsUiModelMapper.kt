@@ -9,12 +9,12 @@ import ca.hojat.gamehub.core.domain.entities.Theme
 import com.paulrybitskyi.hiltbinder.BindType
 import javax.inject.Inject
 
-internal interface InfoScreenDetailsUiModelMapper {
+interface InfoScreenDetailsUiModelMapper {
     fun mapToUiModel(game: Game): InfoScreenDetailsUiModel?
 }
 
 @BindType(installIn = BindType.Component.VIEW_MODEL)
-internal class InfoScreenDetailsUiModelMapperImpl @Inject constructor() :
+class InfoScreenDetailsUiModelMapperImpl @Inject constructor() :
     InfoScreenDetailsUiModelMapper {
 
     private companion object {

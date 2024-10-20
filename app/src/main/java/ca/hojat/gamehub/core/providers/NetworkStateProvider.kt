@@ -12,7 +12,7 @@ interface NetworkStateProvider {
 }
 
 @BindType
-internal class NetworkStateProviderImpl @Inject constructor(
+class NetworkStateProviderImpl @Inject constructor(
     @ApplicationContext private val context: Context
 ) : NetworkStateProvider {
 

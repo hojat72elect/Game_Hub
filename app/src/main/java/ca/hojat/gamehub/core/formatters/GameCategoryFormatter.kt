@@ -11,7 +11,7 @@ interface GameCategoryFormatter {
 }
 
 @BindType
-internal class GameCategoryFormatterImpl @Inject constructor(
+class GameCategoryFormatterImpl @Inject constructor(
     private val stringProvider: StringProvider
 ) : GameCategoryFormatter {
 

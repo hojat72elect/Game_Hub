@@ -33,7 +33,7 @@ private const val ARTICLES_REFRESH_INITIAL_DELAY = 500L
 private const val ARTICLES_REFRESH_DEFAULT_DELAY = 1000L
 
 @HiltViewModel
-internal class NewsViewModel @Inject constructor(
+class NewsViewModel @Inject constructor(
     private val observeArticlesUseCase: ObserveArticlesUseCase,
     private val refreshArticlesUseCase: RefreshArticlesUseCase,
     private val uiModelMapper: NewsItemUiModelMapper,

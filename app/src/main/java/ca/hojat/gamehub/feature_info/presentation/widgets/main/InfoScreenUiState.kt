@@ -4,12 +4,12 @@ import androidx.compose.runtime.Immutable
 import ca.hojat.gamehub.common_ui.widgets.FiniteUiState
 
 @Immutable
-internal data class InfoScreenUiState(
+data class InfoScreenUiState(
     val isLoading: Boolean,
     val game: InfoScreenUiModel?,
 ) {
 
-    internal val finiteUiState: FiniteUiState
+    val finiteUiState: FiniteUiState
         get() = when {
             isInEmptyState -> FiniteUiState.EMPTY
             isInLoadingState -> FiniteUiState.LOADING
@@ -26,15 +26,15 @@ internal data class InfoScreenUiState(
     private val isInSuccessState: Boolean
         get() = (game != null)
 
-    internal fun toEmptyState(): InfoScreenUiState {
+    fun toEmptyState(): InfoScreenUiState {
         return copy(isLoading = false, game = null)
     }
 
-    internal fun toLoadingState(): InfoScreenUiState {
+    fun toLoadingState(): InfoScreenUiState {
         return copy(isLoading = true)
     }
 
-    internal fun toSuccessState(game: InfoScreenUiModel): InfoScreenUiState {
+    fun toSuccessState(game: InfoScreenUiModel): InfoScreenUiState {
         return copy(isLoading = false, game = game)
     }
 

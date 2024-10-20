@@ -18,7 +18,7 @@ import javax.inject.Inject
 
 @BindType(withQualifier = true)
 @UrlOpenerKey(UrlOpenerKey.Type.CUSTOM_TAB)
-internal class CustomTabUrlOpener @Inject constructor(
+class CustomTabUrlOpener @Inject constructor(
     private val customTabsProvider: CustomTabsProvider
 ) : UrlOpener {
 

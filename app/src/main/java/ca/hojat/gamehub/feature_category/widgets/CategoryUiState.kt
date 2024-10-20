@@ -4,12 +4,12 @@ import androidx.compose.runtime.Immutable
 import ca.hojat.gamehub.common_ui.widgets.FiniteUiState
 
 @Immutable
-internal data class CategoryUiState(
+data class CategoryUiState(
     val isLoading: Boolean,
     val title: String,
     val items: List<CategoryUiModel>,
 ) {
-    internal val finiteUiState: FiniteUiState
+    val finiteUiState: FiniteUiState
         get() = when {
             isInEmptyState -> FiniteUiState.EMPTY
             isInLoadingState -> FiniteUiState.LOADING
@@ -26,34 +26,34 @@ internal data class CategoryUiState(
     private val isInSuccessState: Boolean
         get() = items.isNotEmpty()
 
-    internal val isRefreshing: Boolean
+    val isRefreshing: Boolean
         get() = (isLoading && items.isNotEmpty())
 
-    internal fun enableLoading(): CategoryUiState {
+    fun enableLoading(): CategoryUiState {
         return copy(isLoading = true)
     }
 
-    internal fun disableLoading(): CategoryUiState {
+    fun disableLoading(): CategoryUiState {
         return copy(isLoading = false)
     }
 
-    internal fun toEmptyState(): CategoryUiState {
+    fun toEmptyState(): CategoryUiState {
         return copy(isLoading = false, items = emptyList())
     }
 
-    internal fun toSuccessState(
+    fun toSuccessState(
         games: List<CategoryUiModel>
     ): CategoryUiState {
         return copy(isLoading = false, items = games)
     }
 
-    internal fun hasLoadedNewGames(): Boolean {
+    fun hasLoadedNewGames(): Boolean {
         return (!isLoading && items.isNotEmpty())
     }
 }
 
 @Immutable
-internal data class CategoryUiModel(
+data class CategoryUiModel(
     val id: Int,
     val title: String,
     val coverUrl: String?,
