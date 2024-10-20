@@ -9,6 +9,13 @@ interface LikedGamesLocalDataSource {
     suspend fun unlikeGame(gameId: Int)
     suspend fun isGameLiked(gameId: Int): Boolean
 
+    /**
+     * Checks if a specific game is liked ro not.
+     */
     fun observeGameLikeState(gameId: Int): Flow<Boolean>
+
+    /**
+     * Returns a list of all liked games.
+     */
     fun observeLikedGames(pagination: Pagination): Flow<List<Game>>
 }
