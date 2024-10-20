@@ -54,7 +54,7 @@ class InfoScreenLinkUiModelMapperImpl @Inject constructor(
             WebsiteCategory.INSTAGRAM -> 10
             WebsiteCategory.FACEBOOK -> 11
             WebsiteCategory.WIKIPEDIA -> 12
-            WebsiteCategory.WIKIA -> 13
+            WebsiteCategory.FANDOM -> 13
             WebsiteCategory.DISCORD -> 14
         }
 }

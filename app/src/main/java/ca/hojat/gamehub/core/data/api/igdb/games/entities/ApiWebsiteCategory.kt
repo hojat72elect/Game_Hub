@@ -12,7 +12,7 @@ import kotlinx.serialization.encoding.Encoder
 enum class ApiWebsiteCategory(val rawValue: Int) {
     UNKNOWN(rawValue = -1),
     OFFICIAL(rawValue = 1),
-    WIKIA(rawValue = 2),
+    FANDOM(rawValue = 2),
     WIKIPEDIA(rawValue = 3),
     FACEBOOK(rawValue = 4),
     TWITTER(rawValue = 5),

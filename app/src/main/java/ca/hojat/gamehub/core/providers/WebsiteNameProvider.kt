@@ -21,7 +21,7 @@ class WebsiteNameProviderImpl @Inject constructor(
             when (website.category) {
                 WebsiteCategory.UNKNOWN -> R.string.website_unknown
                 WebsiteCategory.OFFICIAL -> R.string.website_official
-                WebsiteCategory.WIKIA -> R.string.website_wikia
+                WebsiteCategory.FANDOM -> R.string.website_fandom
                 WebsiteCategory.WIKIPEDIA -> R.string.website_wikipedia
                 WebsiteCategory.FACEBOOK -> R.string.website_facebook
                 WebsiteCategory.TWITTER -> R.string.website_twitter

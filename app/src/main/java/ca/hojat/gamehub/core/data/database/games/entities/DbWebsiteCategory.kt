@@ -3,7 +3,7 @@ package ca.hojat.gamehub.core.data.database.games.entities
 enum class DbWebsiteCategory {
     UNKNOWN,
     OFFICIAL,
-    WIKIA,
+    FANDOM,
     WIKIPEDIA,
     FACEBOOK,
     TWITTER,

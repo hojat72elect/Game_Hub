@@ -3,7 +3,7 @@ package ca.hojat.gamehub.core.domain.entities
 enum class WebsiteCategory {
     UNKNOWN,
     OFFICIAL,
-    WIKIA,
+    FANDOM,
     WIKIPEDIA,
     FACEBOOK,
     TWITTER,
