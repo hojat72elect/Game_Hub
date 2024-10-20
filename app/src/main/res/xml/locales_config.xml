@@ -2,5 +2,4 @@
 <locale-config xmlns:android="http://schemas.android.com/apk/res/android">
     <locale android:name="en" /> <!-- English (the ultimate fallback) -->
     <locale android:name="fa" /> <!-- Farsi -->
-    <locale android:name="ru" /> <!-- Russian -->
 </locale-config>

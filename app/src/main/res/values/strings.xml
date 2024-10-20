@@ -61,7 +61,6 @@
     <!--    pay attention that it's a better UX practice for names of languages to not be translated-->
     <string name="settings_item_language_option_english" translatable="false">English</string>
     <string name="settings_item_language_option_persian" translatable="false">فارسی</string>
-    <string name="settings_item_language_option_russian" translatable="false">Pусский</string>
 
 
     <string name="settings_section_about_title">About</string>
